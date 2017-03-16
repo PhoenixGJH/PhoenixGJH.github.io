@@ -94,14 +94,14 @@
 1234567891011private void bubbleSort() &amp;#123;    fo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java排序">
-<meta property="og:url" content="http://yoursite.com/2017/03/16/Java排序/index.html">
+<meta property="og:url" content="https://phoenixgjh.github.io/2017/03/16/Java排序/index.html">
 <meta property="og:site_name" content="我的博客">
 <meta property="og:description" content="12private int tobeSort[] = &amp;#123;2, 3, 6, 1, 8, 5, 4, 9, 7, 10&amp;#125;;private int length = tobeSort.length;
 
 冒泡排序通过与相邻元素的比较和交换来把小的数交换到最前面时间复杂度O(n^2)
 
 1234567891011private void bubbleSort() &amp;#123;    fo">
-<meta property="og:updated_time" content="2017-03-16T09:52:06.202Z">
+<meta property="og:updated_time" content="2017-03-16T17:29:50.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java排序">
 <meta name="twitter:description" content="12private int tobeSort[] = &amp;#123;2, 3, 6, 1, 8, 5, 4, 9, 7, 10&amp;#125;;private int length = tobeSort.length;
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/16/Java排序/"/>
+  <link rel="canonical" href="https://phoenixgjh.github.io/2017/03/16/Java排序/"/>
 
 
 
@@ -213,6 +213,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -261,12 +271,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/Java排序/">
+    <link itemprop="mainEntityOfPage" href="https://phoenixgjh.github.io/2017/03/16/Java排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="苟建华">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -311,9 +321,30 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/16/Java排序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/16/Java排序/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+             <span id="/2017/03/16/Java排序/" class="leancloud_visitors" data-flag-title="Java排序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -346,10 +377,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">private void insertSort() &#123;</div><div class="line">    for (int i = 0; i &lt; length - 2; i++) &#123;</div><div class="line">        if (tobeSort[i] &gt; tobeSort[i + 1]) &#123;</div><div class="line">            int temp = tobeSort[i + 1];</div><div class="line">            int j = i;</div><div class="line">            tobeSort[i + 1] = tobeSort[i];</div><div class="line">            while (j &gt; 0 &amp;&amp; tobeSort[j - 1] &gt; temp) &#123;</div><div class="line">                tobeSort[j] = tobeSort[j - 1];</div><div class="line">                j--;</div><div class="line">            &#125;</div><div class="line">            tobeSort[j] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>快速排序<br>在实际应用当中快速排序确实也是表现最好的排序算法。其思想是来自冒泡排序，冒泡排序是通过相邻元素的比较和交换把最小的冒泡到最顶端，而快速排序是比较和交换小数和大数，这样一来不仅把小数冒泡到上面同时也把大数沉到下面。举个栗子：对5,3,8,6,4这个无序序列进行快速排序，思路是右指针找比基准数小的，左指针找比基准数大的，交换之。5,3,8,6,4用5作为比较的基准，最终会把5小的移动到5的左边，比5大的移动到5的右边。5,3,8,6,4首先设置i,j两个指针分别指向两端，j指针先扫描（思考一下为什么？）4比5小停止。然后i扫描，8比5大停止。交换i,j位置。5,3,4,6,8然后j指针再扫描，这时j扫描4时两指针相遇。停止。然后交换4和基准数。4,3,5,6,8一次划分后达到了左边比5小，右边比5大的目的。之后对左右子序列递归排序，最终得到有序序列。为什么一定要j指针先动呢？首先这也不是绝对的，这取决于基准数的位置，因为在最后两个指针相遇的时候，要交换基准数到相遇的位置。一般选取第一个数作为基准数，那么就是在左边，所以最后相遇的数要和基准数交换，那么相遇的数一定要比基准数小。所以j指针先移动才能先找到比基准数小的数。<br>快速排序是不稳定的，其时间平均时间复杂度是O(nlgn)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"> private void quickSort(int left, int right) &#123;</div><div class="line">    int i = left;</div><div class="line">    int j = right;</div><div class="line"></div><div class="line">    int standard = tobeSort[left];//基准数</div><div class="line">    while (left != right) &#123;</div><div class="line">        //从右边找比基准数小的数字</div><div class="line">        while (tobeSort[right] &gt;= standard &amp;&amp; left &lt; right) &#123;</div><div class="line">            right--;</div><div class="line">        &#125;</div><div class="line">        //从左边找比基准数大的数字</div><div class="line">        while (tobeSort[left] &lt;= standard &amp;&amp; left &lt; right) &#123;</div><div class="line">            left++;</div><div class="line">        &#125;</div><div class="line">        if (left &lt; right) &#123;</div><div class="line">            int temp = tobeSort[right];</div><div class="line">            tobeSort[right] = tobeSort[left];</div><div class="line">            tobeSort[left] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //基准数归位</div><div class="line">    tobeSort[i] = tobeSort[left];</div><div class="line">    tobeSort[left] = standard;</div><div class="line">    //递归</div><div class="line">    if (i &lt; (left - 1))</div><div class="line">        quickSort(i, left - 1);//左边排序</div><div class="line">    if ((left + 1) &lt;= j)</div><div class="line">        quickSort(left + 1, j);//右边排序</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">private void quickSort(int left, int right) &#123;</div><div class="line">    int i = left;</div><div class="line">    int j = right;</div><div class="line"></div><div class="line">    int standard = tobeSort[left];//基准数</div><div class="line">    while (left != right) &#123;</div><div class="line">        //从右边找比基准数小的数字</div><div class="line">        while (tobeSort[right] &gt;= standard &amp;&amp; left &lt; right) &#123;</div><div class="line">            right--;</div><div class="line">        &#125;</div><div class="line">        //从左边找比基准数大的数字</div><div class="line">        while (tobeSort[left] &lt;= standard &amp;&amp; left &lt; right) &#123;</div><div class="line">            left++;</div><div class="line">        &#125;</div><div class="line">        if (left &lt; right) &#123;</div><div class="line">            int temp = tobeSort[right];</div><div class="line">            tobeSort[right] = tobeSort[left];</div><div class="line">            tobeSort[left] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //基准数归位</div><div class="line">    tobeSort[i] = tobeSort[left];</div><div class="line">    tobeSort[left] = standard;</div><div class="line">    //递归</div><div class="line">    if (i &lt; (left - 1))</div><div class="line">        quickSort(i, left - 1);//左边排序</div><div class="line">    if ((left + 1) &lt;= j)</div><div class="line">        quickSort(left + 1, j);//右边排序</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>堆排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"> private void heapSort() &#123;</div><div class="line">    for (int i = 0; i &lt; length; i++) &#123;</div><div class="line">        createMaxHeap(tobeSort, length - 1 - i);</div><div class="line">        if (0 != length - 1 - i) &#123;</div><div class="line">            tobeSort[0] = tobeSort[0] + tobeSort[length - 1 - i];</div><div class="line">            tobeSort[length - 1 - i] = tobeSort[0] - tobeSort[length - 1 - i];</div><div class="line">            tobeSort[0] = tobeSort[0] - tobeSort[length - 1 - i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void createMaxHeap(int[] array, int lastIndex) &#123;</div><div class="line">    for (int i = (lastIndex - 1) / 2; i &gt;= 0; i--) &#123;</div><div class="line">        //保存当前正在判断的节点</div><div class="line">        int k = i;</div><div class="line">        //若当前节点的子节点存在</div><div class="line">        while (2 * k + 1 &lt;= lastIndex) &#123;</div><div class="line">           //biggerIndex总是记录较大的节点的值，先赋值为当前判断节点的左子节点</div><div class="line">           int biggerIndex = 2 * k + 1;</div><div class="line">           if (biggerIndex &lt; lastIndex) &#123;</div><div class="line">                // 若右子节点存在，否则此时biggerIndex应该等于 lastIndex</div><div class="line">                if (array[biggerIndex] &lt; array[biggerIndex + 1]) &#123;</div><div class="line">                   // 若右子节点值比左子节点值大，则biggerIndex记录的是右子节点的值</div><div class="line">                   biggerIndex++;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            if (array[k] &lt; array[biggerIndex]) &#123;</div><div class="line">                // 若当前节点值比子节点最大值小，则交换2者得值，交换后将biggerIndex值赋值给k</div><div class="line">                if (0 != length - 1 - i) &#123;</div><div class="line">                    array[k] = array[k] + array[biggerIndex];</div><div class="line">                    array[biggerIndex] = array[k] - array[biggerIndex];</div><div class="line">                    array[k] = array[k] - array[biggerIndex];</div><div class="line">                &#125;</div><div class="line">                k = biggerIndex;</div><div class="line">            &#125; else &#123;</div><div class="line">                break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">private void heapSort() &#123;</div><div class="line">    for (int i = 0; i &lt; length; i++) &#123;</div><div class="line">        createMaxHeap(tobeSort, length - 1 - i);</div><div class="line">        if (0 != length - 1 - i) &#123;</div><div class="line">            tobeSort[0] = tobeSort[0] + tobeSort[length - 1 - i];</div><div class="line">            tobeSort[length - 1 - i] = tobeSort[0] - tobeSort[length - 1 - i];</div><div class="line">            tobeSort[0] = tobeSort[0] - tobeSort[length - 1 - i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void createMaxHeap(int[] array, int lastIndex) &#123;</div><div class="line">    for (int i = (lastIndex - 1) / 2; i &gt;= 0; i--) &#123;</div><div class="line">        //保存当前正在判断的节点</div><div class="line">        int k = i;</div><div class="line">        //若当前节点的子节点存在</div><div class="line">        while (2 * k + 1 &lt;= lastIndex) &#123;</div><div class="line">           //biggerIndex总是记录较大的节点的值，先赋值为当前判断节点的左子节点</div><div class="line">           int biggerIndex = 2 * k + 1;</div><div class="line">           if (biggerIndex &lt; lastIndex) &#123;</div><div class="line">                // 若右子节点存在，否则此时biggerIndex应该等于 lastIndex</div><div class="line">                if (array[biggerIndex] &lt; array[biggerIndex + 1]) &#123;</div><div class="line">                   // 若右子节点值比左子节点值大，则biggerIndex记录的是右子节点的值</div><div class="line">                   biggerIndex++;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            if (array[k] &lt; array[biggerIndex]) &#123;</div><div class="line">                // 若当前节点值比子节点最大值小，则交换2者得值，交换后将biggerIndex值赋值给k</div><div class="line">                if (0 != length - 1 - i) &#123;</div><div class="line">                    array[k] = array[k] + array[biggerIndex];</div><div class="line">                    array[biggerIndex] = array[k] - array[biggerIndex];</div><div class="line">                    array[k] = array[k] - array[biggerIndex];</div><div class="line">                &#125;</div><div class="line">                k = biggerIndex;</div><div class="line">            &#125; else &#123;</div><div class="line">                break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>希尔排序(缩小增量排序)<br>希尔排序是插入排序的一种高效率的实现，也叫缩小增量排序。简单的插入排序中，如果待排序列是正序时，时间复杂度是O(n)，如果序列是基本有序的，使用直接插入排序效率就非常高。希尔排序就利用了这个特点。基本思想是：先将整个待排记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录基本有序时再对全体记录进行一次直接插入排序。<br>时间复杂度可以达到O(n^1.3)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">private void shellSort() &#123;</div><div class="line">    int d = length / 2;</div><div class="line">    while (d &gt;= 1) &#123;</div><div class="line">        for (int i = 0; i &lt; d; i++) &#123;</div><div class="line">            //插入排序</div><div class="line">            for (int j = i + d; j &lt; length - 2; j += d) &#123;</div><div class="line">                if (tobeSort[j] &gt; tobeSort[j + 1]) &#123;</div><div class="line">                    int temp = tobeSort[j + 1];</div><div class="line">                    int k = j;</div><div class="line">                    tobeSort[j + 1] = tobeSort[j];</div><div class="line">                    while (k &gt; 0 &amp;&amp; tobeSort[k - 1] &gt; temp) &#123;</div><div class="line">                        tobeSort[k] = tobeSort[k - 1];</div><div class="line">                        k--;</div><div class="line">                    &#125;</div><div class="line">                    tobeSort[k] = temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        d /= 2;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -400,6 +431,25 @@
 
     <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="2017/03/16/Java排序/"
+     data-title="Java排序"
+     data-content=""
+     data-url="https://phoenixgjh.github.io/2017/03/16/Java排序/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
     </div>
   </div>
 
@@ -410,6 +460,10 @@
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/16/Java排序/"
+           data-title="Java排序" data-url="https://phoenixgjh.github.io/2017/03/16/Java排序/">
+      </div>
     
   </div>
 
@@ -436,7 +490,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="苟建华" />
           <p class="site-author-name" itemprop="name">苟建华</p>
            
@@ -603,32 +657,39 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"phoenixgjh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
 
 
 
 
 
-  
 
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -636,8 +697,137 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("4LWWFPrlEa2tcNxYKpqwzT2q-gzGzoHsz", "k49MiKcq61P3IqJ1nQRWGbQi");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
